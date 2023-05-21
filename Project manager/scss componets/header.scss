@@ -1,0 +1,81 @@
+.task-creator-form {
+  width: 40vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgb(126, 132, 134);
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 10px 5px;
+  display: none;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.form-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0px;
+  width: 100%;
+
+  select,
+  input,
+  textarea {
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    resize: none;
+    outline: none;
+  }
+
+  input[type="date"] { 
+    outline: none;
+  }
+
+  textarea {
+    text-align: left;
+  }
+  
+}
+
+.form-description {
+  display: flex;
+  flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .form-description-error {
+      text-align: center;
+    }
+  
+}
+
+.error-msg {
+    color: rgba(190, 19, 19, 0.83);
+    font-size: 22px;
+    font-weight: 800;
+    visibility: hidden;
+    text-align: center;
+}
+
+@media all and (max-width: 900px) {
+ .task-creator-form {
+  width: 100%;
+  height: 100%;
+ }
+ }
+
+ @media all and (max-width: 500px) {
+  .form-details {
+    gap: 5px;
+  }
+  }
